@@ -299,6 +299,16 @@
         text-decoration: underline;
       }
 
+      /* Hover effects for pillar cards */
+      .pillar-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+      }
+
+      .pillar-card:hover {
+        transform: translateY(-8px) !important;
+        box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25) !important;
+      }
+
       @media (max-width: 768px) {
         .wrapper {
           width: 100% !important;
@@ -307,11 +317,11 @@
         }
 
         header {
-          padding: 30px 30px !important;
+          padding: 30px 20px !important;
         }
 
         section {
-          padding: 30px 30px !important;
+          padding: 30px 20px !important;
         }
 
         .hero-images {
@@ -324,6 +334,14 @@
 
         header h1 {
           font-size: 1.8em;
+        }
+
+        header h2 {
+          font-size: 1.5em !important;
+        }
+
+        header h3 {
+          font-size: 1.2em !important;
         }
       }
     </style>
@@ -339,46 +357,77 @@
           <div class="subtitle">{{ site.subtitle }}</div>
         {% endif %}
 
-        <!-- Mission Section -->
-        <div style="margin: 20px 0 30px 0; text-align: center;">
-          <h2 style="color: var(--text-dark); font-size: 1.8em; margin-bottom: 20px;">Our Mission</h2>
-          
-          <div style="margin: 25px 0;">
-            <h3 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 10px;">End-to-End Trainable Multimodal Data Generation Engine</h3>
-          </div>
-          
-          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 30px 0;">
-            <div style="flex: 1; min-width: 200px; max-width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <strong style="color: var(--primary-color); font-size: 1.2em;">Multimodal Retrieval</strong>
+        <!-- Mission Statement -->
+        <div style="margin: 30px auto; padding: 30px; background: rgba(255, 255, 255, 0.95); border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); max-width: 900px;">
+          <h2 style="color: var(--text-dark); font-size: 2em; margin-bottom: 15px; text-align: center; font-weight: 700;">Our Mission</h2>
+          <p style="color: var(--accent-color); font-size: 1.4em; text-align: center; font-weight: 600; margin: 20px 0; line-height: 1.6;">
+            End-to-End Trainable Multimodal Data Generation Engine
+          </p>
+        </div>
+
+        <!-- Three Pillars -->
+        <div style="margin: 40px 0;">
+          <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin: 0 auto; max-width: 1100px;">
+            <!-- Pillar 1 -->
+            <div class="pillar-card" style="flex: 1; min-width: 280px; max-width: 340px; background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); padding: 30px; border-radius: 12px; box-shadow: 0 6px 20px rgba(59, 130, 246, 0.15); border: 2px solid var(--primary-color);">
+              <div style="text-align: center; margin-bottom: 15px;">
+                <div style="width: 60px; height: 60px; margin: 0 auto 15px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white;">🔍</div>
+                <h3 style="color: var(--text-dark); font-size: 1.4em; font-weight: 700; margin: 0;">Multimodal Reasoning & Retrieval</h3>
+              </div>
+              <p style="color: #475569; text-align: center; margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
+                Advanced reasoning capabilities across text, audio, and video modalities with semantic search
+              </p>
             </div>
-            <div style="flex: 1; min-width: 200px; max-width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <strong style="color: var(--primary-color); font-size: 1.2em;">Multimodal Generation</strong>
+            
+            <!-- Pillar 2 -->
+            <div class="pillar-card" style="flex: 1; min-width: 280px; max-width: 340px; background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); padding: 30px; border-radius: 12px; box-shadow: 0 6px 20px rgba(59, 130, 246, 0.15); border: 2px solid var(--primary-color);">
+              <div style="text-align: center; margin-bottom: 15px;">
+                <div style="width: 60px; height: 60px; margin: 0 auto 15px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white;">✨</div>
+                <h3 style="color: var(--text-dark); font-size: 1.4em; font-weight: 700; margin: 0;">Multimodal Generation</h3>
+              </div>
+              <p style="color: #475569; text-align: center; margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
+                Create high-quality content across modalities with our trained generation models
+              </p>
             </div>
-            <div style="flex: 1; min-width: 200px; max-width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-              <strong style="color: var(--primary-color); font-size: 1.2em;">Multimodal Stylization</strong>
+            
+            <!-- Pillar 3 -->
+            <div class="pillar-card" style="flex: 1; min-width: 280px; max-width: 340px; background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%); padding: 30px; border-radius: 12px; box-shadow: 0 6px 20px rgba(59, 130, 246, 0.15); border: 2px solid var(--primary-color);">
+              <div style="text-align: center; margin-bottom: 15px;">
+                <div style="width: 60px; height: 60px; margin: 0 auto 15px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white;">🎨</div>
+                <h3 style="color: var(--text-dark); font-size: 1.4em; font-weight: 700; margin: 0;">Multimodal Stylization</h3>
+              </div>
+              <p style="color: #475569; text-align: center; margin-top: 15px; font-size: 0.95em; line-height: 1.6;">
+                Human-perception aligned effects and joint audio-visual editing capabilities
+              </p>
             </div>
           </div>
-          
-          <div style="margin: 30px 0;">
-            <h3 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 15px;">Competitive Moat</h3>
-            <ul style="list-style: none; padding: 0; text-align: left; display: inline-block; margin: 0 auto;">
-              <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                <strong>Not training-free:</strong> we train/finetune models for superior quality.
-              </li>
-              <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                Well-established pipelines for multimodal data generation and cleaning.
-              </li>
-              <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
-                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
-                Foundation model with multimodal input & output and native support for iterative multimodal editing.
-              </li>
-            </ul>
-          </div>
-          
-          <div style="margin: 30px 0;">
-            <h3 style="color: var(--accent-color); font-size: 1.3em;">Our Model Can Be Used For</h3>
+        </div>
+
+        <!-- Competitive Advantages -->
+        <div style="margin: 50px auto; padding: 35px; background: rgba(255, 255, 255, 0.95); border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); max-width: 900px;">
+          <h3 style="color: var(--text-dark); font-size: 1.7em; margin-bottom: 25px; text-align: center; font-weight: 700;">🚀 Competitive Advantages</h3>
+          <div style="display: grid; gap: 20px; text-align: left;">
+            <div style="display: flex; align-items: start; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+              <span style="color: var(--primary-color); font-size: 24px; font-weight: bold; margin-right: 15px; min-width: 30px;">✓</span>
+              <div>
+                <strong style="color: var(--text-dark); font-size: 1.15em;">Not Training-Free</strong>
+                <p style="margin: 5px 0 0 0; color: #475569;">We train and finetune models for superior quality rather than relying on off-the-shelf solutions.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: start; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+              <span style="color: var(--primary-color); font-size: 24px; font-weight: bold; margin-right: 15px; min-width: 30px;">✓</span>
+              <div>
+                <strong style="color: var(--text-dark); font-size: 1.15em;">Established Pipelines</strong>
+                <p style="margin: 5px 0 0 0; color: #475569;">Well-tested pipelines for multimodal data generation, cleaning, and quality assurance.</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: start; padding: 15px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+              <span style="color: var(--primary-color); font-size: 24px; font-weight: bold; margin-right: 15px; min-width: 30px;">✓</span>
+              <div>
+                <strong style="color: var(--text-dark); font-size: 1.15em;">Native Multimodal Foundation Model</strong>
+                <p style="margin: 5px 0 0 0; color: #475569;">Foundation model with multimodal input & output, supporting iterative editing workflows.</p>
+              </div>
+            </div>
           </div>
         </div>
 
