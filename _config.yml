@@ -1,8 +1,6 @@
 theme: jekyll-theme-modernist
-title: Schrödinger Audio-Visual Editor
-subtitle: Object-Level Audiovisual Removal
-description: "<span style='color: #dc2626; font-weight: 600;'>TL;DR:</span> This is an interactive audio-visual editor for removing objects from audio and video in parallel."
-keywords: "audio-visual editing, video editing, audio removal, visual removal, AI editor, SAVE, Schrödinger Audio-Visual Editor"
+title: Next-Gen Multimodal AI
+subtitle: Demo Page
 show_downloads: false
 icons:
   homepage: fa-solid fa-globe-asia
