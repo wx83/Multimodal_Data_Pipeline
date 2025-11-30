@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" href="icons8-film-tape-96.png" type="image/png" />
+    <link rel="apple-touch-icon" href="icons8-film-tape-96.png" />
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <style>
+      :root {
+        --primary-color: #3b82f6;
+        --secondary-color: #60a5fa;
+        --accent-color: #2563eb;
+        --dark-bg: #1e293b;
+        --light-bg: #dbeafe;
+        --text-dark: #1e3a8a;
+        --text-light: #3b82f6;
+      }
+
+      body {
+        background: white;
+        background-attachment: fixed;
+      }
+
+      .wrapper {
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        max-width: 1400px !important;
+        width: 95% !important;
+        margin: 10px auto 20px auto !important;
+      }
+
+      header {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+        color: var(--text-dark) !important;
+        padding: 30px 220px 40px 220px !important;
+        border-bottom: 3px solid var(--primary-color);
+      }
+
+      header h1 {
+        color: var(--text-dark) !important;
+        font-size: 2.2em;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-shadow: none;
+        text-align: center;
+      }
+
+      header p {
+        color: var(--text-light) !important;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .subtitle {
+        font-size: 1.3em;
+        color: var(--accent-color) !important;
+        font-weight: 600;
+        margin-bottom: 25px;
+        text-align: center;
+      }
+
+      .authors {
+        margin: 20px 0;
+        line-height: 2;
+        color: var(--text-dark);
+        text-align: center;
+      }
+
+      .authors .author {
+        display: inline;
+        margin-right: 8px;
+        font-size: 1.05em;
+      }
+
+      .authors .author-name {
+        font-weight: 500;
+        margin-right: 2px;
+      }
+
+      .authors .equal-contrib {
+        font-size: 0.75em;
+        vertical-align: super;
+        margin-left: -2px;
+      }
+
+      .affiliations {
+        margin: 15px 0 20px 0;
+        font-size: 1.1em;
+        color: #000000;
+        line-height: 1.6;
+        text-align: center;
+      }
+
+      .affiliation {
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 8px;
+      }
+
+      .affiliation-marker {
+        font-weight: 600;
+        color: var(--accent-color);
+      }
+
+      .hero-images {
+        display: flex;
+        gap: 15px;
+        margin: 25px auto 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .hero-image:hover {
+        transform: translateY(-5px) scale(1.05);
+      }
+
+      .hero-image video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+      }
+
+      .tag {
+        background: var(--primary-color);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.85em;
+        font-weight: 500;
+        border: 1px solid var(--accent-color);
+        transition: all 0.3s ease;
+      }
+
+      .tag:hover {
+        background: var(--accent-color);
+        transform: translateY(-2px);
+      }
+
+      section {
+        padding: 50px 50px !important;
+        background: var(--light-bg);
+        font-size: 1.1em;
+        line-height: 1.8;
+      }
+
+      section h2 {
+        color: var(--text-dark);
+        border-bottom: 3px solid var(--primary-color);
+        padding-bottom: 10px;
+        margin-top: 30px;
+        font-size: 1.8em;
+      }
+
+      section h3 {
+        color: var(--text-light);
+        margin-top: 25px;
+        font-size: 1.4em;
+      }
+
+      section p {
+        margin-bottom: 1.2em;
+      }
+
+      section ul, section ol {
+        margin-left: 20px;
+        margin-bottom: 1.5em;
+      }
+
+      section li {
+        margin-bottom: 0.8em;
+      }
+
+      /* PDF/Image Display Styling */
+      section img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+      }
+
+      /* Table Styling */
+      section table {
+        margin: 30px auto;
+        border-collapse: collapse;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      section table th {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        font-weight: 600;
+        padding: 12px;
+      }
+
+      section table td {
+        border: 1px solid #e2e8f0;
+      }
+
+      section table video {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      section table tr:hover {
+        background-color: #eff6ff;
+      }
+
+      /* Gradio Demo Styling */
+      .gradio-container {
+        margin: 30px 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+        border: 2px solid var(--primary-color);
+        background: white;
+      }
+
+      .gradio-frame {
+        display: block;
+        width: 100%;
+        min-height: 800px;
+        border: none;
+      }
+
+      .demo-instructions {
+        background: #fef3c7;
+        border-left: 4px solid #f59e0b;
+        padding: 15px 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+      }
+
+      .demo-instructions p {
+        margin: 0;
+        color: #92400e;
+        font-size: 0.95em;
+      }
+
+      .demo-instructions code {
+        background: #fde68a;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        color: #78350f;
+      }
+
+      footer {
+        background: #f8fafc;
+        color: #64748b;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      footer a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .wrapper {
+          width: 100% !important;
+          margin: 0 !important;
+          border-radius: 0 !important;
+        }
+
+        header {
+          padding: 30px 30px !important;
+        }
+
+        section {
+          padding: 30px 30px !important;
+        }
+
+        .hero-images {
+          flex-direction: column;
+        }
+
+        .hero-image {
+          max-width: 100%;
+        }
+
+        header h1 {
+          font-size: 1.8em;
+        }
+      }
+    </style>
+
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header {% unless site.description or site.github.project_tagline %} class="without-description" {% endunless %}>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        
+        {% if site.subtitle %}
+          <div class="subtitle">{{ site.subtitle }}</div>
+        {% endif %}
+
+        <!-- Mission Section -->
+        <div style="margin: 20px 0 30px 0; text-align: center;">
+          <h2 style="color: var(--text-dark); font-size: 1.8em; margin-bottom: 20px;">Our Mission</h2>
+          
+          <div style="margin: 25px 0;">
+            <h3 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 10px;">End-to-End Trainable Multimodal Data Generation Engine</h3>
+          </div>
+          
+          <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 30px 0;">
+            <div style="flex: 1; min-width: 200px; max-width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <strong style="color: var(--primary-color); font-size: 1.2em;">Multimodal Retrieval</strong>
+            </div>
+            <div style="flex: 1; min-width: 200px; max-width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <strong style="color: var(--primary-color); font-size: 1.2em;">Multimodal Generation</strong>
+            </div>
+            <div style="flex: 1; min-width: 200px; max-width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <strong style="color: var(--primary-color); font-size: 1.2em;">Multimodal Stylization</strong>
+            </div>
+          </div>
+          
+          <div style="margin: 30px 0;">
+            <h3 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 15px;">Competitive Moat</h3>
+            <ul style="list-style: none; padding: 0; text-align: left; display: inline-block; margin: 0 auto;">
+              <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                <strong>Not training-free:</strong> we train/finetune models for superior quality.
+              </li>
+              <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                Well-established pipelines for multimodal data generation and cleaning.
+              </li>
+              <li style="margin-bottom: 12px; padding-left: 30px; position: relative;">
+                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                Foundation model with multimodal input & output and native support for iterative multimodal editing.
+              </li>
+            </ul>
+          </div>
+          
+          <div style="margin: 30px 0;">
+            <h3 style="color: var(--accent-color); font-size: 1.3em;">Our Model Can Be Used For</h3>
+          </div>
+        </div>
+
+        {% if site.description or site.github.project_tagline %}
+          <p>{{ site.description | default: site.github.project_tagline }}</p>
+        {% endif %}
+
+        <!-- Tags Section -->
+        {% if site.tags %}
+        <div class="tags">
+          {% for tag in site.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+    </div>
+    <footer>
+      {% if site.github.is_project_page %}
+        <p>Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+      {% endif %}
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
