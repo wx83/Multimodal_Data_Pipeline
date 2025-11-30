@@ -434,6 +434,80 @@
           </div>
         </div>
 
+        <!-- Data & Modality Coverage -->
+        <div style="margin: 50px auto; padding: 35px; background: rgba(255, 255, 255, 0.95); border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); max-width: 1000px;">
+          <h3 style="color: var(--text-dark); font-size: 1.7em; margin-bottom: 30px; text-align: center; font-weight: 700;">📊 Comprehensive Data & Modality Coverage</h3>
+          
+          <!-- Data Types -->
+          <div style="margin-bottom: 35px;">
+            <h4 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 15px; text-align: center; font-weight: 600;">Data Types</h4>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+              <div style="flex: 1; min-width: 200px; max-width: 250px; padding: 20px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 8px; text-align: center; border: 2px solid var(--secondary-color);">
+                <div style="font-size: 32px; margin-bottom: 10px;">🔬</div>
+                <strong style="color: var(--text-dark); font-size: 1.1em;">Synthetic Data</strong>
+              </div>
+              <div style="flex: 1; min-width: 200px; max-width: 250px; padding: 20px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 8px; text-align: center; border: 2px solid var(--secondary-color);">
+                <div style="font-size: 32px; margin-bottom: 10px;">🌍</div>
+                <strong style="color: var(--text-dark); font-size: 1.1em;">Real-World Data</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modalities -->
+          <div style="margin-bottom: 35px;">
+            <h4 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 15px; text-align: center; font-weight: 600;">Supported Modalities</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 700px; margin: 0 auto;">
+              <div style="padding: 15px; background: #f0f9ff; border-radius: 8px; text-align: center; border: 1px solid var(--secondary-color);">
+                <div style="font-size: 28px; margin-bottom: 8px;">📝</div>
+                <strong style="color: var(--text-dark);">Text</strong>
+              </div>
+              <div style="padding: 15px; background: #f0f9ff; border-radius: 8px; text-align: center; border: 1px solid var(--secondary-color);">
+                <div style="font-size: 28px; margin-bottom: 8px;">🎵</div>
+                <strong style="color: var(--text-dark);">Audio</strong>
+              </div>
+              <div style="padding: 15px; background: #f0f9ff; border-radius: 8px; text-align: center; border: 1px solid var(--secondary-color);">
+                <div style="font-size: 28px; margin-bottom: 8px;">🎬</div>
+                <strong style="color: var(--text-dark);">Video</strong>
+              </div>
+              <div style="padding: 15px; background: #f0f9ff; border-radius: 8px; text-align: center; border: 1px solid var(--secondary-color);">
+                <div style="font-size: 28px; margin-bottom: 8px;">👁️</div>
+                <strong style="color: var(--text-dark);">Eye Tracking</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Format Details -->
+          <div>
+            <h4 style="color: var(--accent-color); font-size: 1.3em; margin-bottom: 15px; text-align: center; font-weight: 600;">Format Specifications</h4>
+            <div style="display: flex; gap: 25px; justify-content: center; flex-wrap: wrap;">
+              <!-- Audio Formats -->
+              <div style="flex: 1; min-width: 250px; max-width: 350px; padding: 20px; background: #f0f9ff; border-radius: 8px; border: 1px solid var(--secondary-color);">
+                <div style="text-align: center; margin-bottom: 12px;">
+                  <span style="font-size: 24px;">🎵</span>
+                  <strong style="color: var(--text-dark); font-size: 1.15em; margin-left: 8px;">Audio Formats</strong>
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; color: #475569;">
+                  <li style="padding: 8px 0; border-bottom: 1px solid #e0e7ff;">• Mono</li>
+                  <li style="padding: 8px 0; border-bottom: 1px solid #e0e7ff;">• Binaural</li>
+                  <li style="padding: 8px 0;">• Spatial Audio</li>
+                </ul>
+              </div>
+              
+              <!-- Video Formats -->
+              <div style="flex: 1; min-width: 250px; max-width: 350px; padding: 20px; background: #f0f9ff; border-radius: 8px; border: 1px solid var(--secondary-color);">
+                <div style="text-align: center; margin-bottom: 12px;">
+                  <span style="font-size: 24px;">🎬</span>
+                  <strong style="color: var(--text-dark); font-size: 1.15em; margin-left: 8px;">Video Formats</strong>
+                </div>
+                <ul style="list-style: none; padding: 0; margin: 0; color: #475569;">
+                  <li style="padding: 8px 0; border-bottom: 1px solid #e0e7ff;">• 2D Video</li>
+                  <li style="padding: 8px 0;">• 3D Video</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {% if site.description or site.github.project_tagline %}
           <p>{{ site.description | default: site.github.project_tagline }}</p>
         {% endif %}
