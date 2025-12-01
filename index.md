@@ -86,7 +86,131 @@
 
 **Current Status:** ✅ Production-ready with 2D video and mono audio
 
-### Downstream Task Performance
+#### Examples
+
+<div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 30px 0;">
+  
+  <!-- Video Section -->
+  <div style="text-align: center; margin-bottom: 35px;">
+    <h4 style="color: var(--primary-color); margin: 0 0 20px 0; font-size: 1.2em;">📺 Video Preview</h4>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px;">
+      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+        src="https://www.youtube.com/embed/WfXRTZdyIe0?start=97" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Separated Audio Tracks -->
+  <div style="margin-bottom: 35px;">
+    <h4 style="color: var(--primary-color); margin: 0 0 20px 0; font-size: 1.2em;">🎵 Separated Audio Tracks</h4>
+    <div style="display: grid; gap: 20px;">
+      
+      <div style="padding: 20px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%); border-radius: 8px; border-left: 4px solid #f59e0b;">
+        <div style="font-weight: 600; color: #78350f; margin-bottom: 10px; font-size: 1.05em;">🎼 Music Track</div>
+        <audio controls style="width: 100%; margin-top: 5px;">
+          <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/music_intro.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div style="padding: 20px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+        <div style="font-weight: 600; color: #1e3a8a; margin-bottom: 10px; font-size: 1.05em;">💬 Dialogue Track</div>
+        <audio controls style="width: 100%; margin-top: 5px;">
+          <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/dialog_intro.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <div style="padding: 20px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%); border-radius: 8px; border-left: 4px solid #ec4899;">
+        <div style="font-weight: 600; color: #831843; margin-bottom: 10px; font-size: 1.05em;">🔊 Sound Effect Track</div>
+        <audio controls style="width: 100%; margin-top: 5px;">
+          <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/effect_intro.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Metadata Section -->
+  <div style="background: #f8fafc; border-radius: 8px; padding: 25px; border: 1px solid #e2e8f0;">
+    <h4 style="color: var(--primary-color); margin: 0 0 15px 0; font-size: 1.2em;">📋 Video Metadata</h4>
+    
+    <div style="margin-bottom: 20px;">
+      <div style="font-weight: 600; color: #334155; margin-bottom: 8px; font-size: 1.05em;">Title:</div>
+      <div style="color: #475569; font-size: 1.05em; line-height: 1.6;">
+        Surviving Grand Canyon (Full Episode) | America's National Parks
+      </div>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+      <div style="font-weight: 600; color: #334155; margin-bottom: 10px; font-size: 1.05em;">Tags:</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">national geographic</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">nat geo</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">wildlife</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">documentary</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">America's National Parks</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">Grand Canyon</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">nature</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">survival</span>
+        <span style="background: #e0e7ff; color: #3730a3; padding: 6px 12px; border-radius: 16px; font-size: 0.9em;">conservation</span>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-weight: 600; color: #334155; margin-bottom: 12px; font-size: 1.05em;">Aligned Narration Timestamps:</div>
+      <div style="background: white; padding: 20px; border-radius: 6px; border-left: 3px solid var(--primary-color);">
+        <div style="font-family: 'Courier New', monospace; color: #475569; line-height: 2; font-size: 0.95em;">
+          <div style="margin-bottom: 10px;">
+            <span style="color: var(--primary-color); font-weight: 600;">[3.37→16.77]</span> 
+            <span style="margin-left: 10px;">The Grand Canyon, a chasm 277 miles long, even in winter, what appears Baron supports life.</span>
+          </div>
+          <div style="margin-bottom: 10px;">
+            <span style="color: var(--primary-color); font-weight: 600;">[23.56→28.83]</span> 
+            <span style="margin-left: 10px;">A female mountain lion shelters from the cold, with her eight-month-old daughter.</span>
+          </div>
+          <div style="margin-bottom: 10px;">
+            <span style="color: var(--primary-color); font-weight: 600;">[33.72→52.77]</span> 
+            <span style="margin-left: 10px;">She can't rest for long, with an extra mouth to feed, finding food is tough at the best of times.</span>
+          </div>
+          <div style="margin-bottom: 10px;">
+            <span style="color: var(--primary-color); font-weight: 600;">[54.69→57.91]</span> 
+            <span style="margin-left: 10px;">But a good hunt can provide for a week or more.</span>
+          </div>
+          <div style="margin-bottom: 10px;">
+            <span style="color: var(--primary-color); font-weight: 600;">[61.61→63.51]</span> 
+            <span style="margin-left: 10px;">Elk, are their main prey.</span>
+          </div>
+          <div style="margin-bottom: 10px;">
+            <span style="color: var(--primary-color); font-weight: 600;">[65.42→67.50]</span> 
+            <span style="margin-left: 10px;">The canyon limits their escape routes.</span>
+          </div>
+          <div>
+            <span style="color: var(--primary-color); font-weight: 600;">[78.95→86.43]</span> 
+            <span style="margin-left: 10px;">Every day is a battle for survival, in one of America's grandest national parks.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align: center; margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: 8px; border: 2px solid var(--secondary-color);">
+  <p style="margin: 0; font-size: 1.1em;">
+    <strong>🔍 Explore More Examples:</strong> 
+    <a href="https://wx83.github.io/TeaserGen_Official/" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-left: 8px;">
+      Visit TeaserGen Demo Page →
+    </a>
+  </p>
+</div>
+
+
+#### Downstream Task Performance
+
+We present teaser generation as a downstream task for this dataset. Generating short teasers are considered as 
 
 <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
   <tr style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">
