@@ -90,47 +90,52 @@
 
 <div style="background: white; border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 30px 0;">
   
-  <!-- Video Section -->
-  <div style="text-align: center; margin-bottom: 35px;">
-    <h4 style="color: var(--primary-color); margin: 0 0 20px 0; font-size: 1.2em;">📺 Video Preview</h4>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px;">
-      <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-        src="https://www.youtube.com/embed/WfXRTZdyIe0?start=97" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
+  <!-- Video and Audio Tracks in One Row -->
+  <div style="display: flex; gap: 25px; margin-bottom: 35px; flex-wrap: wrap;">
+    
+    <!-- Left: Video Section -->
+    <div style="flex: 1; min-width: 400px;">
+      <h4 style="color: var(--primary-color); margin: 0 0 15px 0; font-size: 1.2em;">📺 Video Preview</h4>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 8px;">
+        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          src="https://www.youtube.com/embed/WfXRTZdyIe0?start=97" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
 
-  <!-- Separated Audio Tracks -->
-  <div style="margin-bottom: 35px;">
-    <h4 style="color: var(--primary-color); margin: 0 0 20px 0; font-size: 1.2em;">🎵 Separated Audio Tracks</h4>
-    <div style="display: grid; gap: 20px;">
-      
-      <div style="padding: 20px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%); border-radius: 8px; border-left: 4px solid #f59e0b;">
-        <div style="font-weight: 600; color: #78350f; margin-bottom: 10px; font-size: 1.05em;">🎼 Music Track</div>
-        <audio controls style="width: 100%; margin-top: 5px;">
-          <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/music_intro.wav" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
+    <!-- Right: Separated Audio Tracks -->
+    <div style="flex: 1; min-width: 400px;">
+      <h4 style="color: var(--primary-color); margin: 0 0 15px 0; font-size: 1.2em;">🎵 Separated Audio Tracks</h4>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        
+        <div style="padding: 15px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 50%); border-radius: 8px; border-left: 4px solid #f59e0b;">
+          <div style="font-weight: 600; color: #78350f; margin-bottom: 8px; font-size: 1.0em;">🎼 Music Track</div>
+          <audio controls style="width: 100%;">
+            <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/music_intro.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
 
-      <div style="padding: 20px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%); border-radius: 8px; border-left: 4px solid var(--primary-color);">
-        <div style="font-weight: 600; color: #1e3a8a; margin-bottom: 10px; font-size: 1.05em;">💬 Dialogue Track</div>
-        <audio controls style="width: 100%; margin-top: 5px;">
-          <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/dialog_intro.wav" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
+        <div style="padding: 15px; background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+          <div style="font-weight: 600; color: #1e3a8a; margin-bottom: 8px; font-size: 1.0em;">💬 Dialogue Track</div>
+          <audio controls style="width: 100%;">
+            <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/dialog_intro.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
 
-      <div style="padding: 20px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%); border-radius: 8px; border-left: 4px solid #ec4899;">
-        <div style="font-weight: 600; color: #831843; margin-bottom: 10px; font-size: 1.05em;">🔊 Sound Effect Track</div>
-        <audio controls style="width: 100%; margin-top: 5px;">
-          <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/effect_intro.wav" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
+        <div style="padding: 15px; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%); border-radius: 8px; border-left: 4px solid #ec4899;">
+          <div style="font-weight: 600; color: #831843; margin-bottom: 8px; font-size: 1.0em;">🔊 Sound Effect Track</div>
+          <audio controls style="width: 100%;">
+            <source src="https://54321anonymous.github.io/ICLR2025/WfXRTZdyIe0/effect_intro.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        
       </div>
-      
     </div>
+    
   </div>
 
   <!-- Metadata Section -->
